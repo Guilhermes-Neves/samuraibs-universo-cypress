@@ -1,13 +1,11 @@
 /// <reference types="Cypress" />
 
 import {el} from './elements'
+import header from '../../components/header'
 
 class DashboardPage {
-  shouldHaveText(expectedText) {
-    cy.get(el.linkProfile)
-        .should('be.visible')
-        .find('strong')
-        .should('have.text', expectedText)
+  constructor() {
+    this.header = header
   }
 }
 
