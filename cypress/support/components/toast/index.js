@@ -1,11 +1,11 @@
-import {el} from './elements'
+import { el } from './elements'
 
-class Toast { 
+class Toast {
   shouldHaveText(expectedText) {
-    cy.get(el.toast)
-        .should('be.visible')
-        .find('p')
-        .should('have.text', expectedText)
+    cy.get(el.toast, { timeout: 10000 })
+      .should('be.visible')
+      .find('p')
+      .should('have.text', expectedText)
   }
 }
 
